@@ -7,7 +7,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='base.html')),
-
+    # Math Engine
+    url(r'^math-engine/', include(
+        'math_engine.urls',
+        namespace='math_engine')
+    ),
     # Examples:
     # url(r'^$', 'dimagi.views.home', name='home'),
     # url(r'^dimagi/', include('dimagi.foo.urls')),
