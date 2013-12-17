@@ -28,6 +28,10 @@ setting local project::
 
     $ dimagi-project$ ./scripts/local.sh
 
+nose tests::
+
+    $ dimagi-project$ ./scripts/test.sh
+
 runserver::
 
     $ dimagi-project$ ./scripts/runserver.sh
