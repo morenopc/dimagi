@@ -10,7 +10,7 @@ from .models import MathEngineHistory
 
 class MathEngineView(JSONResponseMixin, View):
     """ Web Development 1) Math Engine """
-    
+
     content_type = 'application/javascript'
     json_dumps_kwargs = {'indent': 2}
 
@@ -36,7 +36,7 @@ class MathEngineChallengeView(JSONResponseMixin, View):
 
         rds = request.GET.get('records', 1)
         values = request.GET.get('values')
-        
+
         values_list = map(int, values[1:-1].split(', '))
 
         MathEngineHistory.objects.create(
