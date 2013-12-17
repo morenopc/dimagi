@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from .views import MathEngineView
+from .views import MathEngineView, MathEngineChallengeView
 
 urlpatterns = patterns('',
 
@@ -9,5 +9,12 @@ urlpatterns = patterns('',
         regex=r'^$',
         view=MathEngineView.as_view(),
         name="results-json"
+    ),
+
+    # {% url "math_engine:challenge-results-json" %}
+    url(
+        regex=r'^challenge/$',
+        view=MathEngineChallengeView.as_view(),
+        name="challenge-results-json"
     ),
 )
