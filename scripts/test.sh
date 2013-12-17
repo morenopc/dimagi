@@ -1,0 +1,1 @@
+./env/bin/python dimagi/manage.py test
